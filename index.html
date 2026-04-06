@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Market Status Web</title>
+  <link rel="stylesheet" href="./base.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="hero">
+      <div class="hero__topline">
+        <p class="hero__kicker">Global Market Status</p>
+        <div class="hero__timestamp">
+          <p class="hero__timestamp-time">Updated at <span data-last-updated>--:--:--</span></p>
+          <p class="hero__timestamp-date" data-last-updated-date>-- --- ----</p>
+        </div>
+      </div>
+      <h1>MarketStatus Web</h1>
+      <p class="hero__copy">
+        Static web dashboard for major stock markets, including countdowns to the next open or close.
+      </p>
+      <p class="hero__server-status" data-server-status>Running as a static site.</p>
+    </section>
+
+    <section class="app-error" data-app-error hidden></section>
+    <section class="market-grid" data-market-grid></section>
+    <section class="disclosure" data-holiday-disclosure hidden></section>
+  </main>
+
+  <section class="modal" data-holiday-modal hidden>
+    <div class="modal__backdrop" data-close-holiday-modal></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="holiday-modal-title">
+      <div class="modal__header">
+        <div>
+          <p class="modal__eyebrow">Built-in Holiday Database</p>
+          <h2 id="holiday-modal-title" data-holiday-modal-title>Holidays</h2>
+        </div>
+        <button type="button" class="modal__close" data-close-holiday-modal aria-label="Close holiday list">Close</button>
+      </div>
+      <div class="modal__body" data-holiday-modal-body></div>
+    </div>
+  </section>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
+
