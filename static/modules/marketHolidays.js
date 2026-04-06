@@ -5,18 +5,18 @@ export const holidayCalendars = {
     "2026-02-16": { type: "closed", name: "Presidents' Day" },
     "2026-04-03": { type: "closed", name: "Good Friday" },
     "2026-05-25": { type: "closed", name: "Memorial Day" },
-    "2026-06-19": { type: "closed", name: "Juneteenth National Independence Day" },
+    "2026-06-19": { type: "closed", name: "Juneteenth" },
     "2026-07-03": { type: "closed", name: "Independence Day (Observed)" },
     "2026-09-07": { type: "closed", name: "Labor Day" },
-    "2026-11-26": { type: "closed", name: "Thanksgiving Day" },
+    "2026-11-26": { type: "closed", name: "Thanksgiving" },
     "2026-11-27": {
       type: "special",
-      name: "Day After Thanksgiving Early Close",
+      name: "Day After Thanksgiving",
       sessions: [{ open: "09:30", close: "13:00" }]
     },
     "2026-12-24": {
       type: "special",
-      name: "Christmas Eve Early Close",
+      name: "Christmas Eve",
       sessions: [{ open: "09:30", close: "13:00" }]
     },
     "2026-12-25": { type: "closed", name: "Christmas Day" }
@@ -29,14 +29,14 @@ export const holidayCalendars = {
     "2026-07-01": { type: "closed", name: "Canada Day" },
     "2026-08-03": { type: "closed", name: "Civic Holiday" },
     "2026-09-07": { type: "closed", name: "Labour Day" },
-    "2026-10-12": { type: "closed", name: "Thanksgiving Day" },
+    "2026-10-12": { type: "closed", name: "Thanksgiving" },
     "2026-12-24": {
       type: "special",
-      name: "Christmas Eve Early Close",
+      name: "Christmas Eve",
       sessions: [{ open: "09:30", close: "13:00" }]
     },
     "2026-12-25": { type: "closed", name: "Christmas Day" },
-    "2026-12-28": { type: "closed", name: "In Lieu of Boxing Day" }
+    "2026-12-28": { type: "closed", name: "Boxing Day (Observed)" }
   },
   lse: {
     "2026-01-01": { type: "closed", name: "New Year's Day" },
@@ -46,11 +46,11 @@ export const holidayCalendars = {
     "2026-05-25": { type: "closed", name: "Spring Bank Holiday" },
     "2026-08-31": { type: "closed", name: "Summer Bank Holiday" },
     "2026-12-25": { type: "closed", name: "Christmas Day" },
-    "2026-12-28": { type: "closed", name: "Boxing Day (Substitute Day)" }
+    "2026-12-28": { type: "closed", name: "Boxing Day (Observed)" }
   },
   tse: {
     "2026-01-01": { type: "closed", name: "New Year's Day" },
-    "2026-01-02": { type: "closed", name: "New Year Holiday" },
+    "2026-01-02": { type: "closed", name: "New Year" },
     "2026-01-12": { type: "closed", name: "Coming of Age Day" },
     "2026-02-11": { type: "closed", name: "National Foundation Day" },
     "2026-02-23": { type: "closed", name: "Emperor's Birthday" },
@@ -67,64 +67,64 @@ export const holidayCalendars = {
     "2026-10-12": { type: "closed", name: "Sports Day" },
     "2026-11-03": { type: "closed", name: "Culture Day" },
     "2026-11-23": { type: "closed", name: "Labor Thanksgiving Day" },
-    "2026-12-31": { type: "closed", name: "Year-End Market Holiday" }
+    "2026-12-31": { type: "closed", name: "Year-End Holiday" }
   },
   sse: {
     "2026-01-01": { type: "closed", name: "New Year's Day" },
-    "2026-01-02": { type: "closed", name: "New Year Holiday" },
-    "2026-02-16": { type: "closed", name: "Lunar New Year Holiday" },
-    "2026-02-17": { type: "closed", name: "Lunar New Year Holiday" },
-    "2026-02-18": { type: "closed", name: "Lunar New Year Holiday" },
-    "2026-02-19": { type: "closed", name: "Lunar New Year Holiday" },
-    "2026-02-20": { type: "closed", name: "Lunar New Year Holiday" },
-    "2026-02-23": { type: "closed", name: "Lunar New Year Holiday" },
+    "2026-01-02": { type: "closed", name: "New Year" },
+    "2026-02-16": { type: "closed", name: "Lunar New Year" },
+    "2026-02-17": { type: "closed", name: "Lunar New Year" },
+    "2026-02-18": { type: "closed", name: "Lunar New Year" },
+    "2026-02-19": { type: "closed", name: "Lunar New Year" },
+    "2026-02-20": { type: "closed", name: "Lunar New Year" },
+    "2026-02-23": { type: "closed", name: "Lunar New Year" },
     "2026-04-06": { type: "closed", name: "Qingming Festival" },
-    "2026-05-01": { type: "closed", name: "Labour Day Holiday" },
-    "2026-05-04": { type: "closed", name: "Labour Day Holiday" },
-    "2026-05-05": { type: "closed", name: "Labour Day Holiday" },
+    "2026-05-01": { type: "closed", name: "Labour Day" },
+    "2026-05-04": { type: "closed", name: "Labour Day" },
+    "2026-05-05": { type: "closed", name: "Labour Day" },
     "2026-06-19": { type: "closed", name: "Dragon Boat Festival" },
     "2026-09-25": { type: "closed", name: "Mid-Autumn Festival" },
-    "2026-10-01": { type: "closed", name: "National Day Holiday" },
-    "2026-10-02": { type: "closed", name: "National Day Holiday" },
-    "2026-10-05": { type: "closed", name: "National Day Holiday" },
-    "2026-10-06": { type: "closed", name: "National Day Holiday" },
-    "2026-10-07": { type: "closed", name: "National Day Holiday" }
+    "2026-10-01": { type: "closed", name: "National Day" },
+    "2026-10-02": { type: "closed", name: "National Day" },
+    "2026-10-05": { type: "closed", name: "National Day" },
+    "2026-10-06": { type: "closed", name: "National Day" },
+    "2026-10-07": { type: "closed", name: "National Day" }
   },
   hkex: {
-    "2026-01-01": { type: "closed", name: "The First Day of January" },
+    "2026-01-01": { type: "closed", name: "New Year's Day" },
     "2026-02-16": {
       type: "special",
-      name: "Lunar New Year Eve Half Day",
+      name: "Lunar New Year Eve",
       sessions: [{ open: "09:30", close: "12:10" }]
     },
     "2026-02-17": { type: "closed", name: "Lunar New Year's Day" },
-    "2026-02-18": { type: "closed", name: "The Second Day of Lunar New Year" },
-    "2026-02-19": { type: "closed", name: "The Third Day of Lunar New Year" },
+    "2026-02-18": { type: "closed", name: "Lunar New Year (Day 2)" },
+    "2026-02-19": { type: "closed", name: "Lunar New Year (Day 3)" },
     "2026-04-03": { type: "closed", name: "Good Friday" },
-    "2026-04-06": { type: "closed", name: "The Day Following Ching Ming Festival" },
-    "2026-04-07": { type: "closed", name: "The Day Following Easter Monday" },
+    "2026-04-06": { type: "closed", name: "Ching Ming Festival (Observed)" },
+    "2026-04-07": { type: "closed", name: "Easter Monday (Observed)" },
     "2026-05-01": { type: "closed", name: "Labour Day" },
-    "2026-05-25": { type: "closed", name: "The Day Following the Birthday of the Buddha" },
+    "2026-05-25": { type: "closed", name: "Buddha's Birthday (Observed)" },
     "2026-06-19": { type: "closed", name: "Tuen Ng Festival" },
-    "2026-07-01": { type: "closed", name: "Hong Kong Special Administrative Region Establishment Day" },
+    "2026-07-01": { type: "closed", name: "HKSAR Establishment Day" },
     "2026-10-01": { type: "closed", name: "National Day" },
-    "2026-10-19": { type: "closed", name: "The Day Following Chung Yeung Festival" },
+    "2026-10-19": { type: "closed", name: "Chung Yeung Festival (Observed)" },
     "2026-12-24": {
       type: "special",
-      name: "Christmas Eve Half Day",
+      name: "Christmas Eve",
       sessions: [{ open: "09:30", close: "12:10" }]
     },
     "2026-12-25": { type: "closed", name: "Christmas Day" },
     "2026-12-31": {
       type: "special",
-      name: "New Year's Eve Half Day",
+      name: "New Year's Eve",
       sessions: [{ open: "09:30", close: "12:10" }]
     }
   },
   sgx: {
     "2026-01-01": { type: "closed", name: "New Year's Day" },
     "2026-02-17": { type: "closed", name: "Chinese New Year" },
-    "2026-02-18": { type: "closed", name: "Chinese New Year Holiday" },
+    "2026-02-18": { type: "closed", name: "Chinese New Year (Day 2)" },
     "2026-04-03": { type: "closed", name: "Good Friday" },
     "2026-05-01": { type: "closed", name: "Labour Day" },
     "2026-05-27": { type: "closed", name: "Hari Raya Haji" },
@@ -141,14 +141,14 @@ export const holidayCalendars = {
     "2026-06-08": { type: "closed", name: "King's Birthday" },
     "2026-12-24": {
       type: "special",
-      name: "Christmas Eve Early Close",
+      name: "Christmas Eve",
       sessions: [{ open: "10:00", close: "14:10" }]
     },
     "2026-12-25": { type: "closed", name: "Christmas Day" },
     "2026-12-28": { type: "closed", name: "Boxing Day" },
     "2026-12-31": {
       type: "special",
-      name: "Last Business Day Early Close",
+      name: "New Year's Eve",
       sessions: [{ open: "10:00", close: "14:10" }]
     }
   },
@@ -189,7 +189,7 @@ export const holidayCalendars = {
       name: "Labor Day",
       sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
     },
-    "2026-11-26": { type: "closed", name: "Thanksgiving Day" },
+    "2026-11-26": { type: "closed", name: "Thanksgiving" },
     "2026-11-27": {
       type: "special",
       name: "Day After Thanksgiving",
