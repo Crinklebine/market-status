@@ -1,6 +1,7 @@
 # MarketStatus
 
 [![Deploy GitHub Pages](https://github.com/Crinklebine/market-status/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/Crinklebine/market-status/actions/workflows/deploy-pages.yml)
+[![Last Commit](https://img.shields.io/github/last-commit/Crinklebine/market-status)](https://github.com/Crinklebine/market-status/commits/main)
 
 Live site: [https://crinklebine.github.io/market-status/](https://crinklebine.github.io/market-status/)
 
