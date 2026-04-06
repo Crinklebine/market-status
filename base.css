@@ -312,7 +312,7 @@ a {
 .disclosure__links {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -320,12 +320,16 @@ a {
 
 .disclosure__link,
 .modal__close {
+  display: inline-flex;
+  align-items: center;
   border: 1px solid rgba(152, 196, 220, 0.18);
   border-radius: 999px;
-  padding: 8px 12px;
+  padding: 6px 10px;
   color: var(--text);
   background: rgba(255, 255, 255, 0.04);
   font: inherit;
+  font-size: 0.94rem;
+  line-height: 1.05;
   cursor: pointer;
 }
 
