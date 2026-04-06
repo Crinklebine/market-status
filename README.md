@@ -1,5 +1,6 @@
 # MarketStatus
 
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](./LICENSE)
 [![Deploy GitHub Pages](https://github.com/Crinklebine/market-status/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/Crinklebine/market-status/actions/workflows/deploy-pages.yml)
 [![Last Commit](https://img.shields.io/github/last-commit/Crinklebine/market-status)](https://github.com/Crinklebine/market-status/commits/main)
 
@@ -56,3 +57,7 @@ After that, GitHub will publish the site automatically on each push to `main`.
 - Market schedules and holiday data are static built-in 2026 reference data.
 - CME remains a simplified generic Globex-style schedule rather than a product-specific session engine.
 - External source links open directly from the page.
+
+## License
+
+Licensed under the GNU Affero General Public License v3.0. See [LICENSE](./LICENSE).
