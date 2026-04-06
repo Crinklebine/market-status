@@ -17,7 +17,7 @@ Market Status Web is a pure static web version of MarketStatus. It keeps the bro
 You can preview it locally with a simple static server:
 
 ```bash
-cd market-status-web
+cd market-status
 python3 -m http.server 8040
 ```
 
