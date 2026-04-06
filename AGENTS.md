@@ -40,6 +40,9 @@ Suggested ownership:
 - Keep holiday logic separate from UI rendering logic.
 - Avoid hidden services, sync pipelines, or remote dependencies.
 - Prefer explicit static data over opaque runtime fetching.
+- Keep holiday names short and UI-friendly rather than copying long official labels verbatim when a shorter plain-language name is clear.
+- Prefer concise holiday names such as `Labor Day`, `Independence Day`, or `Day After Thanksgiving` over verbose schedule-oriented labels.
+- When a market holiday is an observed substitute date, prefer the suffix `(Observed)` rather than longer variants like `Substitute Day`, `In Lieu of`, or `Observed Holiday` unless the exchange officially requires different wording.
 
 ## UI Direction
 
