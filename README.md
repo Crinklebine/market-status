@@ -2,6 +2,8 @@
 
 [![Deploy GitHub Pages](https://github.com/Crinklebine/market-status/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/Crinklebine/market-status/actions/workflows/deploy-pages.yml)
 
+Live site: [https://crinklebine.github.io/market-status/](https://crinklebine.github.io/market-status/)
+
 MarketStatus is a static web app for tracking whether major global stock markets are open or closed in real time, with live countdowns, built-in holiday calendars, and timezone-aware market status.
 
 ## Architecture
