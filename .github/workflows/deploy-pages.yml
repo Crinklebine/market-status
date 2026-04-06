@@ -25,6 +25,7 @@ jobs:
           cp index.html _site/
           cp base.css _site/
           cp app.js _site/
+          cp favicon.svg _site/
           cp .nojekyll _site/
           cp -R static _site/
 
