@@ -64,8 +64,7 @@ a {
 }
 
 .hero__copy,
-.hero__timestamp,
-.hero__server-status {
+.hero__timestamp {
   color: var(--muted);
   font-size: 0.98rem;
 }
@@ -95,10 +94,6 @@ a {
 .hero__timestamp-date {
   margin-top: 2px;
   font-size: 0.9rem;
-}
-
-.hero__server-status {
-  margin: 0;
 }
 
 .app-error {

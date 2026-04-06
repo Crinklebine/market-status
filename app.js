@@ -19,7 +19,6 @@ const els = {
   holidayModal: document.querySelector("[data-holiday-modal]"),
   holidayModalTitle: document.querySelector("[data-holiday-modal-title]"),
   holidayModalBody: document.querySelector("[data-holiday-modal-body]"),
-  serverStatus: document.querySelector("[data-server-status]"),
   footerCopyright: document.querySelector("[data-footer-copyright]"),
   footerVersion: document.querySelector("[data-footer-version]"),
 };
@@ -255,7 +254,6 @@ function refresh() {
 }
 
 function boot() {
-  els.serverStatus.textContent = "Running as a static site with browser-side market calculations.";
   renderHolidayDisclosure();
   renderFooter();
   refresh();
