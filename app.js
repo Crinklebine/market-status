@@ -23,7 +23,7 @@ const els = {
   footerVersion: document.querySelector("[data-footer-version]"),
 };
 
-const APP_VERSION = "1.0.0";
+const APP_VERSION = "1.0.1";
 const localTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time";
 const marketCardsById = new Map();
 
