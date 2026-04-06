@@ -29,6 +29,10 @@ a {
   color: inherit;
 }
 
+.muted {
+  color: var(--muted);
+}
+
 .app-shell {
   width: min(1520px, calc(100% - 56px));
   margin: 0 auto;
@@ -274,6 +278,18 @@ a {
   margin-top: 26px;
 }
 
+.app-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(197, 211, 224, 0.08);
+  font-size: 0.88rem;
+  line-height: 1.1;
+}
+
 .disclosure__card {
   padding: 18px 20px;
   border: 1px solid rgba(152, 196, 220, 0.14);
@@ -426,6 +442,11 @@ a {
     text-align: left;
   }
 
+  .app-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .market-card__header,
   .market-card__meta div {
     flex-direction: column;
@@ -448,4 +469,3 @@ a {
     text-align: left;
   }
 }
-

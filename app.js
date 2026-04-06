@@ -20,8 +20,11 @@ const els = {
   holidayModalTitle: document.querySelector("[data-holiday-modal-title]"),
   holidayModalBody: document.querySelector("[data-holiday-modal-body]"),
   serverStatus: document.querySelector("[data-server-status]"),
+  footerCopyright: document.querySelector("[data-footer-copyright]"),
+  footerVersion: document.querySelector("[data-footer-version]"),
 };
 
+const APP_VERSION = "1.0.0";
 const localTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time";
 const marketCardsById = new Map();
 
@@ -236,6 +239,12 @@ function renderError(message) {
   els.errorPanel.textContent = message;
 }
 
+function renderFooter() {
+  const year = new Date().getFullYear();
+  els.footerCopyright.textContent = `© Crinklebine ${year}`;
+  els.footerVersion.textContent = `MarketStatus ${APP_VERSION}`;
+}
+
 function refresh() {
   try {
     render(getAllMarketStatuses(markets));
@@ -248,6 +257,7 @@ function refresh() {
 function boot() {
   els.serverStatus.textContent = "Running as a static site with browser-side market calculations.";
   renderHolidayDisclosure();
+  renderFooter();
   refresh();
   setInterval(refresh, 1000);
 }
