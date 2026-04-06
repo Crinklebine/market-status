@@ -1,6 +1,6 @@
-# Market Status Web
+# MarketStatus
 
-Market Status Web is a pure static web version of MarketStatus. It keeps the browser-side market engine and dashboard UI, but removes the local Python server so it can be hosted directly on GitHub Pages or any static web host.
+MarketStatus is a static web app for tracking whether major global stock markets are open or closed in real time, with live countdowns, built-in holiday calendars, and timezone-aware market status.
 
 ## Architecture
 
