@@ -35,7 +35,16 @@ This project is static-site ready:
 - no build step required
 - `.nojekyll` included
 
-Deploy the repository root to GitHub Pages.
+Deployment is handled by the included GitHub Actions workflow in [`/.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml).
+
+To enable it on GitHub:
+
+1. Open your repository on GitHub.
+2. Go to `Settings` -> `Pages`.
+3. Under `Build and deployment`, set `Source` to `GitHub Actions`.
+4. Push to `main`, or run the `Deploy GitHub Pages` workflow manually from the `Actions` tab.
+
+After that, GitHub will publish the site automatically on each push to `main`.
 
 ## Notes
 
