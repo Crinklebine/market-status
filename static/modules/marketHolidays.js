@@ -153,18 +153,52 @@ export const holidayCalendars = {
     }
   },
   cme: {
-    "2026-01-01": { type: "closed", name: "New Year's Day" },
+    "2026-01-01": {
+      type: "special",
+      name: "New Year's Day Holiday Schedule",
+      sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
+    },
+    "2026-01-19": {
+      type: "special",
+      name: "Martin Luther King Jr. Day Holiday Schedule",
+      sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
+    },
+    "2026-02-16": {
+      type: "special",
+      name: "Presidents Day Holiday Schedule",
+      sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
+    },
     "2026-04-03": { type: "closed", name: "Good Friday" },
+    "2026-05-25": {
+      type: "special",
+      name: "Memorial Day Holiday Schedule",
+      sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
+    },
+    "2026-06-19": {
+      type: "special",
+      name: "Juneteenth Holiday Schedule",
+      sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }]
+    },
+    "2026-07-03": {
+      type: "special",
+      name: "Independence Day Holiday Schedule",
+      sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }]
+    },
+    "2026-09-07": {
+      type: "special",
+      name: "Labor Day Holiday Schedule",
+      sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
+    },
     "2026-11-26": { type: "closed", name: "Thanksgiving Day" },
     "2026-11-27": {
       type: "special",
-      name: "Day After Thanksgiving Reduced Session",
-      sessions: [{ open: "17:00", close: "12:00", closeDayOffset: 1 }]
+      name: "Day After Thanksgiving Holiday Schedule",
+      sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }]
     },
     "2026-12-24": {
       type: "special",
-      name: "Christmas Eve Reduced Session",
-      sessions: [{ open: "17:00", close: "12:00", closeDayOffset: 1 }]
+      name: "Christmas Eve Holiday Schedule",
+      sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }]
     },
     "2026-12-25": { type: "closed", name: "Christmas Day" }
   }
@@ -172,10 +206,10 @@ export const holidayCalendars = {
 
 export const holidayDataDisclosure = {
   title: "Holiday Data Disclosure",
-  body: "Built-in holiday data is static 2026 reference data. We sourced exchange calendars from official exchange or government pages where available. CME is modeled as a simplified generic Globex-style schedule in this app and may not reflect product-specific hours, ad hoc changes, or final holiday-hour updates.",
-  lastUpdated: "2026-04-02",
+  body: "Built-in holiday data is static 2026 reference data. We sourced exchange calendars from official exchange or government pages where available. CME now follows the published 2026 Globex holiday date windows in a simplified product-agnostic model, but it may still differ from product-specific hours, ad hoc changes, and final holiday-hour updates.",
+  lastUpdated: "2026-04-06",
   sourceLinks: [
-    { marketId: "cme", label: "CME Group", url: "https://www.cmegroup.com/trading-hours.html" },
+    { marketId: "cme", label: "CME Group Globex", url: "https://www.cmegroup.com/trading-hours.html#globex" },
     { marketId: "nyse", label: "NYSE", url: "https://www.nyse.com/trade/hours-calendars" },
     { marketId: "tsx", label: "TSX", url: "https://www.tsx.com/en/trading/calendars-and-trading-hours/calendar" },
     { marketId: "lse", label: "LSE via GOV.UK", url: "https://www.gov.uk/bank-holidays" },
@@ -232,4 +266,3 @@ export function getHolidayEntries(marketId) {
     ...calendar[dateKey]
   }));
 }
-

@@ -122,6 +122,7 @@ export function zonedDateTimeToUtc(civilDateTime, timeZone) {
 function getWeeklySessionTemplates(market) {
   if (market.weeklySessions) {
     return market.weeklySessions.map((session) => ({
+      openDayOffset: 0,
       openTime: parseTime(session.open),
       closeDayOffset: (session.closeDay - session.openDay + 7) % 7,
       closeTime: parseTime(session.close)
@@ -129,6 +130,7 @@ function getWeeklySessionTemplates(market) {
   }
 
   return market.sessions.map((session) => ({
+    openDayOffset: 0,
     openTime: parseTime(session.open),
     closeDayOffset: 0,
     closeTime: parseTime(session.close)
@@ -142,6 +144,7 @@ function getBaseSessionsForDate(market, civilDate) {
     return market.weeklySessions
       .filter((session) => session.openDay === weekday)
       .map((session) => ({
+        openDayOffset: 0,
         openTime: parseTime(session.open),
         closeDayOffset: (session.closeDay - session.openDay + 7) % 7,
         closeTime: parseTime(session.close)
@@ -165,6 +168,7 @@ function getSessionsForDate(market, civilDate) {
   if (holidayEntry?.type === "special") {
     return {
       sessions: holidayEntry.sessions.map((session) => ({
+        openDayOffset: session.openDayOffset ?? 0,
         openTime: parseTime(session.open),
         closeDayOffset: session.closeDayOffset ?? 0,
         closeTime: parseTime(session.close)
@@ -192,7 +196,9 @@ function getSessionOccurrences(market, nowParts) {
     const { sessions, holidayEntry } = getSessionsForDate(market, candidateDate);
 
     for (const session of sessions) {
-      const openAt = zonedDateTimeToUtc(createCivilDateTime(candidateDate, session.openTime), market.timeZone);
+      const candidateKey = toDateKey(candidateDate);
+      const openDateBase = addDays(candidateDate, session.openDayOffset ?? 0);
+      const openAt = zonedDateTimeToUtc(createCivilDateTime(openDateBase, session.openTime), market.timeZone);
       const closeAt = zonedDateTimeToUtc(
         createCivilDateTime(addDays(candidateDate, session.closeDayOffset), session.closeTime),
         market.timeZone
@@ -200,10 +206,18 @@ function getSessionOccurrences(market, nowParts) {
       const openDate = getCivilDateForInstant(openAt, market.timeZone);
       const closeDate = getCivilDateForInstant(closeAt, market.timeZone);
 
-      if (getHolidayEntry(market.id, openDate)?.type === "closed") {
+      const openHoliday = getHolidayEntry(market.id, openDate);
+      const closeHoliday = getHolidayEntry(market.id, closeDate);
+      if (openHoliday && toDateKey(openDate) !== candidateKey) {
         continue;
       }
-      if (toDateKey(closeDate) !== toDateKey(openDate) && getHolidayEntry(market.id, closeDate)?.type === "closed") {
+      if (closeHoliday && toDateKey(closeDate) !== candidateKey) {
+        continue;
+      }
+      if (openHoliday?.type === "closed") {
+        continue;
+      }
+      if (toDateKey(closeDate) !== toDateKey(openDate) && closeHoliday?.type === "closed") {
         continue;
       }
 
@@ -267,4 +281,3 @@ export function getMarketStatus(market, now = new Date()) {
 export function getAllMarketStatuses(markets, now = new Date()) {
   return markets.map((market) => getMarketStatus(market, now));
 }
-
