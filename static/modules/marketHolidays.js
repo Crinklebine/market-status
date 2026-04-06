@@ -155,49 +155,49 @@ export const holidayCalendars = {
   cme: {
     "2026-01-01": {
       type: "special",
-      name: "New Year's Day Holiday Schedule",
+      name: "New Year's Day",
       sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
     },
     "2026-01-19": {
       type: "special",
-      name: "Martin Luther King Jr. Day Holiday Schedule",
+      name: "Martin Luther King Jr. Day",
       sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
     },
     "2026-02-16": {
       type: "special",
-      name: "Presidents Day Holiday Schedule",
+      name: "Presidents Day",
       sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
     },
     "2026-04-03": { type: "closed", name: "Good Friday" },
     "2026-05-25": {
       type: "special",
-      name: "Memorial Day Holiday Schedule",
+      name: "Memorial Day",
       sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
     },
     "2026-06-19": {
       type: "special",
-      name: "Juneteenth Holiday Schedule",
+      name: "Juneteenth",
       sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }]
     },
     "2026-07-03": {
       type: "special",
-      name: "Independence Day Holiday Schedule",
+      name: "Independence Day",
       sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }]
     },
     "2026-09-07": {
       type: "special",
-      name: "Labor Day Holiday Schedule",
+      name: "Labor Day",
       sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }]
     },
     "2026-11-26": { type: "closed", name: "Thanksgiving Day" },
     "2026-11-27": {
       type: "special",
-      name: "Day After Thanksgiving Holiday Schedule",
+      name: "Day After Thanksgiving",
       sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }]
     },
     "2026-12-24": {
       type: "special",
-      name: "Christmas Eve Holiday Schedule",
+      name: "Christmas Eve",
       sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }]
     },
     "2026-12-25": { type: "closed", name: "Christmas Day" }
