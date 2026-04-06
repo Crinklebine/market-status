@@ -1,0 +1,19 @@
+{
+  "name": "MarketStatus",
+  "short_name": "MarketStatus",
+  "icons": [
+    {
+      "src": "./favicon-32x32.png?v=1.0.1",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "./apple-touch-icon.png?v=1.0.1",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#102433",
+  "background_color": "#061018",
+  "display": "standalone"
+}
