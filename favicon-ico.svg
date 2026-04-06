@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>MarketStatus ICO source</title>
+  <rect width="64" height="64" fill="#102433"/>
+  <rect x="12" y="35" width="8" height="13" rx="2.5" fill="#8dc6df"/>
+  <rect x="25" y="27" width="8" height="21" rx="2.5" fill="#8dc6df"/>
+  <rect x="38" y="18" width="8" height="30" rx="2.5" fill="#48d597"/>
+  <path d="M12 24c5-5 10.5-7.5 16.5-7.5 4.7 0 8.8 1.2 12.3 3.8l4-4v11H33.8l4.5-4.5c-2.7-1.5-5.8-2.3-9.5-2.3-4.8 0-9 1.8-12.6 5.4L12 24z" fill="#edf7fb"/>
+</svg>
