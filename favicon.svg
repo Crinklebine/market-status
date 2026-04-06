@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>MarketStatus favicon</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16354a" />
+      <stop offset="100%" stop-color="#08121b" />
+    </linearGradient>
+    <linearGradient id="bars" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4dd5a5" />
+      <stop offset="100%" stop-color="#8dc6df" />
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="16" fill="url(#bg)" />
+  <rect x="13" y="34" width="7" height="14" rx="3.5" fill="url(#bars)" />
+  <rect x="24" y="24" width="7" height="24" rx="3.5" fill="url(#bars)" />
+  <rect x="35" y="17" width="7" height="31" rx="3.5" fill="url(#bars)" />
+  <rect x="46" y="28" width="7" height="20" rx="3.5" fill="#ff8f70" />
+  <path d="M14 22.5c4-4.5 8.5-6.5 14-6.5 5 0 9 1.6 12.3 4.4l4.6-4.7 2.8 8.8-8.8-2.7 3.2-3.3c-2.7-2.1-5.9-3.3-9.9-3.3-4.4 0-8 1.5-11 4.4l-2.2 2.2-4-0.3z" fill="#edf7fb" opacity="0.92" />
+</svg>
