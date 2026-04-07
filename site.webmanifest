@@ -3,12 +3,12 @@
   "short_name": "MarketStatus",
   "icons": [
     {
-      "src": "./favicon-32x32.png?v=1.0.3",
+      "src": "./favicon-32x32.png?v=1.0.4",
       "sizes": "32x32",
       "type": "image/png"
     },
     {
-      "src": "./apple-touch-icon.png?v=1.0.3",
+      "src": "./apple-touch-icon.png?v=1.0.4",
       "sizes": "180x180",
       "type": "image/png"
     }
