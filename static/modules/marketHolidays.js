@@ -310,3 +310,7 @@ export function getHolidayEntries(marketId) {
 export function getUpcomingHolidayEntries(marketId, fromDateKey) {
   return getHolidayEntries(marketId).filter((holiday) => holiday.dateKey >= fromDateKey);
 }
+
+export function getCurrentAndFutureYearHolidayEntries(marketId, fromYear) {
+  return getHolidayEntries(marketId).filter((holiday) => Number(holiday.dateKey.slice(0, 4)) >= fromYear);
+}

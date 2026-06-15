@@ -1,5 +1,5 @@
 import { markets } from "./static/modules/marketDefinitions.js";
-import { getUpcomingHolidayEntries, holidayDataDisclosure } from "./static/modules/marketHolidays.js";
+import { getCurrentAndFutureYearHolidayEntries, holidayDataDisclosure } from "./static/modules/marketHolidays.js";
 import { getAllMarketStatuses } from "./static/modules/marketSchedule.js";
 import {
   formatDisclosureDate,
@@ -61,7 +61,8 @@ function groupHolidaysByYear(holidays) {
 function renderHolidayModal(marketId, marketLabel) {
   const market = markets.find((entry) => entry.id === marketId);
   const fromDateKey = market ? getLocalDateKey(new Date(), market.timeZone) : "";
-  const holidays = getUpcomingHolidayEntries(marketId, fromDateKey);
+  const fromYear = fromDateKey ? Number(fromDateKey.slice(0, 4)) : new Date().getFullYear();
+  const holidays = getCurrentAndFutureYearHolidayEntries(marketId, fromYear);
   const holidayYears = groupHolidaysByYear(holidays);
 
   els.holidayModalTitle.textContent = `${marketLabel} Holidays`;
@@ -83,7 +84,7 @@ function renderHolidayModal(marketId, marketLabel) {
         `).join("")}
       </div>
     `
-    : `<p class="modal__empty">No upcoming holiday data available.</p>`;
+    : `<p class="modal__empty">No current or future holiday data available.</p>`;
 }
 
 function renderHolidayDisclosure() {
