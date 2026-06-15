@@ -397,12 +397,23 @@ a {
   gap: 8px;
 }
 
+.modal__holiday-group-header {
+  display: grid;
+  gap: 4px;
+}
+
 .modal__holiday-year {
   margin: 0;
   color: #8dc6df;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   font-size: 0.82rem;
+}
+
+.modal__holiday-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
 }
 
 .modal__holiday-list {

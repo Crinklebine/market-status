@@ -51,7 +51,23 @@ export const holidayCalendars = {
       sessions: [{ open: "09:30", close: "13:00" }]
     },
     "2026-12-25": { type: "closed", name: "Christmas Day" },
-    "2026-12-28": { type: "closed", name: "Boxing Day (Observed)" }
+    "2026-12-28": { type: "closed", name: "Boxing Day (Observed)" },
+    "2027-01-01": { type: "closed", name: "New Year's Day", source: "inferred" },
+    "2027-02-15": { type: "closed", name: "Family Day", source: "inferred" },
+    "2027-03-26": { type: "closed", name: "Good Friday", source: "inferred" },
+    "2027-05-24": { type: "closed", name: "Victoria Day", source: "inferred" },
+    "2027-07-01": { type: "closed", name: "Canada Day", source: "inferred" },
+    "2027-08-02": { type: "closed", name: "Civic Holiday", source: "inferred" },
+    "2027-09-06": { type: "closed", name: "Labour Day", source: "inferred" },
+    "2027-10-11": { type: "closed", name: "Thanksgiving", source: "inferred" },
+    "2027-12-24": {
+      type: "special",
+      name: "Christmas Eve",
+      sessions: [{ open: "09:30", close: "13:00" }],
+      source: "inferred"
+    },
+    "2027-12-27": { type: "closed", name: "Christmas Day (Observed)", source: "inferred" },
+    "2027-12-28": { type: "closed", name: "Boxing Day (Observed)", source: "inferred" }
   },
   lse: {
     "2026-01-01": { type: "closed", name: "New Year's Day" },
@@ -246,7 +262,7 @@ export const holidayCalendars = {
 
 export const holidayDataDisclosure = {
   title: "Holiday Data Disclosure",
-  body: "Built-in holiday data now includes full 2026 reference coverage for all tracked markets, plus official 2027 dates currently published for NYSE, LSE, and JPX / TSE. Other markets remain on 2026 built-in data until their official 2027 calendars are published or verified. CME follows the published 2026 Globex holiday date windows in a simplified product-agnostic model, so it may still differ from product-specific hours, ad hoc changes, and final holiday-hour updates.",
+  body: "Built-in holiday data now includes full 2026 reference coverage for all tracked markets, plus official 2027 dates currently published for NYSE, LSE, and JPX / TSE. TSX 2027 is included as a preliminary inferred schedule derived from the exchange's named holiday pattern and observed-date conventions, not from an official 2027 TSX publication. Other markets remain on 2026 built-in data until their official 2027 calendars are published or verified. CME follows the published 2026 Globex holiday date windows in a simplified product-agnostic model, so it may still differ from product-specific hours, ad hoc changes, and final holiday-hour updates.",
   lastUpdated: "2026-06-15",
   sourceLinks: [
     { marketId: "cme", label: "CME Group Globex", url: "https://www.cmegroup.com/trading-hours.html#globex" },

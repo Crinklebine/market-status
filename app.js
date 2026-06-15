@@ -1,6 +1,6 @@
-import { markets } from "./static/modules/marketDefinitions.js?v=1.0.8";
-import { getCurrentAndFutureYearHolidayEntries, holidayDataDisclosure } from "./static/modules/marketHolidays.js?v=1.0.8";
-import { getAllMarketStatuses } from "./static/modules/marketSchedule.js?v=1.0.8";
+import { markets } from "./static/modules/marketDefinitions.js?v=1.0.9";
+import { getCurrentAndFutureYearHolidayEntries, holidayDataDisclosure } from "./static/modules/marketHolidays.js?v=1.0.9";
+import { getAllMarketStatuses } from "./static/modules/marketSchedule.js?v=1.0.9";
 import {
   formatDisclosureDate,
   formatDuration,
@@ -8,7 +8,7 @@ import {
   formatLocalMarketTime,
   getFlagEmoji,
   getLocalDateKey,
-} from "./static/modules/formatters.js?v=1.0.8";
+} from "./static/modules/formatters.js?v=1.0.9";
 
 const els = {
   grid: document.querySelector("[data-market-grid]"),
@@ -23,7 +23,7 @@ const els = {
   footerVersion: document.querySelector("[data-footer-version]"),
 };
 
-const APP_VERSION = "1.0.8";
+const APP_VERSION = "1.0.9";
 const localTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time";
 const marketCardsById = new Map();
 
@@ -71,7 +71,12 @@ function renderHolidayModal(marketId, marketLabel) {
       <div class="modal__holiday-groups">
         ${holidayYears.map((group) => `
           <section class="modal__holiday-group" aria-label="Holidays for ${group.year}">
-            <h3 class="modal__holiday-year">${group.year}</h3>
+            <div class="modal__holiday-group-header">
+              <h3 class="modal__holiday-year">${group.year}</h3>
+              ${group.entries.some((holiday) => holiday.source === "inferred")
+                ? `<p class="modal__holiday-note">Preliminary inferred dates</p>`
+                : ""}
+            </div>
             <ul class="modal__holiday-list">
               ${group.entries.map((holiday) => `
                 <li class="modal__holiday-item">
