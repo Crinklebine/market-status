@@ -1,6 +1,6 @@
-import { markets } from "./static/modules/marketDefinitions.js";
-import { getCurrentAndFutureYearHolidayEntries, holidayDataDisclosure } from "./static/modules/marketHolidays.js";
-import { getAllMarketStatuses } from "./static/modules/marketSchedule.js";
+import { markets } from "./static/modules/marketDefinitions.js?v=1.0.8";
+import { getCurrentAndFutureYearHolidayEntries, holidayDataDisclosure } from "./static/modules/marketHolidays.js?v=1.0.8";
+import { getAllMarketStatuses } from "./static/modules/marketSchedule.js?v=1.0.8";
 import {
   formatDisclosureDate,
   formatDuration,
@@ -8,7 +8,7 @@ import {
   formatLocalMarketTime,
   getFlagEmoji,
   getLocalDateKey,
-} from "./static/modules/formatters.js";
+} from "./static/modules/formatters.js?v=1.0.8";
 
 const els = {
   grid: document.querySelector("[data-market-grid]"),
@@ -23,7 +23,7 @@ const els = {
   footerVersion: document.querySelector("[data-footer-version]"),
 };
 
-const APP_VERSION = "1.0.7";
+const APP_VERSION = "1.0.8";
 const localTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time";
 const marketCardsById = new Map();
 
