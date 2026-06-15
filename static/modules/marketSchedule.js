@@ -1,4 +1,4 @@
-import { getHolidayEntry, getNextHolidayEntry, toDateKey } from "./marketHolidays.js?v=1.0.9";
+import { getHolidayEntry, getNextHolidayEntry, toDateKey } from "./marketHolidays.js?v=1.0.10";
 
 const WEEKDAY_MAP = {
   Mon: 1,

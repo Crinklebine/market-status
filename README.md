@@ -54,7 +54,7 @@ After that, GitHub will publish the site automatically on each push to `main`.
 
 ## Notes
 
-- Market schedules use built-in reference data, with full 2026 holiday coverage, partial official 2027 coverage where published, and a preliminary inferred 2027 TSX schedule.
+- Market schedules use built-in reference data, with full 2026 holiday coverage, partial official 2027 coverage where published, and preliminary inferred 2027 coverage for markets that still lack verified exchange calendars.
 - CME remains a simplified generic Globex-style schedule rather than a product-specific session engine.
 - External source links open directly from the page.
 

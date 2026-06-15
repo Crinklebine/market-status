@@ -144,7 +144,24 @@ export const holidayCalendars = {
     "2026-10-02": { type: "closed", name: "National Day" },
     "2026-10-05": { type: "closed", name: "National Day" },
     "2026-10-06": { type: "closed", name: "National Day" },
-    "2026-10-07": { type: "closed", name: "National Day" }
+    "2026-10-07": { type: "closed", name: "National Day" },
+    "2027-01-01": { type: "closed", name: "New Year's Day", source: "inferred" },
+    "2027-02-05": { type: "closed", name: "Lunar New Year", source: "inferred" },
+    "2027-02-08": { type: "closed", name: "Lunar New Year", source: "inferred" },
+    "2027-02-09": { type: "closed", name: "Lunar New Year", source: "inferred" },
+    "2027-02-10": { type: "closed", name: "Lunar New Year", source: "inferred" },
+    "2027-02-11": { type: "closed", name: "Lunar New Year", source: "inferred" },
+    "2027-04-05": { type: "closed", name: "Qingming Festival", source: "inferred" },
+    "2027-05-03": { type: "closed", name: "Labour Day", source: "inferred" },
+    "2027-05-04": { type: "closed", name: "Labour Day", source: "inferred" },
+    "2027-05-05": { type: "closed", name: "Labour Day", source: "inferred" },
+    "2027-06-09": { type: "closed", name: "Dragon Boat Festival", source: "inferred" },
+    "2027-09-15": { type: "closed", name: "Mid-Autumn Festival", source: "inferred" },
+    "2027-10-01": { type: "closed", name: "National Day", source: "inferred" },
+    "2027-10-04": { type: "closed", name: "National Day", source: "inferred" },
+    "2027-10-05": { type: "closed", name: "National Day", source: "inferred" },
+    "2027-10-06": { type: "closed", name: "National Day", source: "inferred" },
+    "2027-10-07": { type: "closed", name: "National Day", source: "inferred" }
   },
   hkex: {
     "2026-01-01": { type: "closed", name: "New Year's Day" },
@@ -175,6 +192,36 @@ export const holidayCalendars = {
       type: "special",
       name: "New Year's Eve",
       sessions: [{ open: "09:30", close: "12:10" }]
+    },
+    "2027-01-01": { type: "closed", name: "New Year's Day", source: "inferred" },
+    "2027-02-05": {
+      type: "special",
+      name: "Lunar New Year Eve",
+      sessions: [{ open: "09:30", close: "12:10" }],
+      source: "inferred"
+    },
+    "2027-02-08": { type: "closed", name: "Lunar New Year", source: "inferred" },
+    "2027-02-09": { type: "closed", name: "Lunar New Year (Observed)", source: "inferred" },
+    "2027-03-26": { type: "closed", name: "Good Friday", source: "inferred" },
+    "2027-03-29": { type: "closed", name: "Easter Monday", source: "inferred" },
+    "2027-04-05": { type: "closed", name: "Ching Ming Festival", source: "inferred" },
+    "2027-05-14": { type: "closed", name: "Buddha's Birthday", source: "inferred" },
+    "2027-06-09": { type: "closed", name: "Tuen Ng Festival", source: "inferred" },
+    "2027-07-01": { type: "closed", name: "HKSAR Establishment Day", source: "inferred" },
+    "2027-10-01": { type: "closed", name: "National Day", source: "inferred" },
+    "2027-10-18": { type: "closed", name: "Chung Yeung Festival", source: "inferred" },
+    "2027-12-24": {
+      type: "special",
+      name: "Christmas Eve",
+      sessions: [{ open: "09:30", close: "12:10" }],
+      source: "inferred"
+    },
+    "2027-12-27": { type: "closed", name: "Christmas Day (Observed)", source: "inferred" },
+    "2027-12-31": {
+      type: "special",
+      name: "New Year's Eve",
+      sessions: [{ open: "09:30", close: "12:10" }],
+      source: "inferred"
     }
   },
   sgx: {
@@ -187,7 +234,16 @@ export const holidayCalendars = {
     "2026-06-01": { type: "closed", name: "Vesak Day (Observed)" },
     "2026-08-10": { type: "closed", name: "National Day (Observed)" },
     "2026-11-09": { type: "closed", name: "Deepavali (Observed)" },
-    "2026-12-25": { type: "closed", name: "Christmas Day" }
+    "2026-12-25": { type: "closed", name: "Christmas Day" },
+    "2027-01-01": { type: "closed", name: "New Year's Day", source: "inferred" },
+    "2027-02-08": { type: "closed", name: "Chinese New Year (Observed)", source: "inferred" },
+    "2027-02-09": { type: "closed", name: "Chinese New Year (Day 2, Observed)", source: "inferred" },
+    "2027-03-10": { type: "closed", name: "Hari Raya Puasa", source: "inferred" },
+    "2027-03-26": { type: "closed", name: "Good Friday", source: "inferred" },
+    "2027-05-17": { type: "closed", name: "Hari Raya Haji (Observed)", source: "inferred" },
+    "2027-05-20": { type: "closed", name: "Vesak Day", source: "inferred" },
+    "2027-08-09": { type: "closed", name: "National Day", source: "inferred" },
+    "2027-10-29": { type: "closed", name: "Deepavali", source: "inferred" }
   },
   asx: {
     "2026-01-01": { type: "closed", name: "New Year's Day" },
@@ -206,6 +262,26 @@ export const holidayCalendars = {
       type: "special",
       name: "New Year's Eve",
       sessions: [{ open: "10:00", close: "14:10" }]
+    },
+    "2027-01-01": { type: "closed", name: "New Year's Day", source: "inferred" },
+    "2027-01-26": { type: "closed", name: "Australia Day", source: "inferred" },
+    "2027-03-26": { type: "closed", name: "Good Friday", source: "inferred" },
+    "2027-03-29": { type: "closed", name: "Easter Monday", source: "inferred" },
+    "2027-04-26": { type: "closed", name: "Anzac Day (Observed)", source: "inferred" },
+    "2027-06-14": { type: "closed", name: "King's Birthday", source: "inferred" },
+    "2027-12-24": {
+      type: "special",
+      name: "Christmas Eve",
+      sessions: [{ open: "10:00", close: "14:10" }],
+      source: "inferred"
+    },
+    "2027-12-27": { type: "closed", name: "Christmas Day (Observed)", source: "inferred" },
+    "2027-12-28": { type: "closed", name: "Boxing Day (Observed)", source: "inferred" },
+    "2027-12-31": {
+      type: "special",
+      name: "New Year's Eve",
+      sessions: [{ open: "10:00", close: "14:10" }],
+      source: "inferred"
     }
   },
   cme: {
@@ -256,13 +332,75 @@ export const holidayCalendars = {
       name: "Christmas Eve",
       sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }]
     },
-    "2026-12-25": { type: "closed", name: "Christmas Day" }
+    "2026-12-25": { type: "closed", name: "Christmas Day" },
+    "2027-01-01": {
+      type: "special",
+      name: "New Year's Day",
+      sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }],
+      source: "inferred"
+    },
+    "2027-01-18": {
+      type: "special",
+      name: "Martin Luther King Jr. Day",
+      sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }],
+      source: "inferred"
+    },
+    "2027-02-15": {
+      type: "special",
+      name: "Presidents Day",
+      sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }],
+      source: "inferred"
+    },
+    "2027-03-26": { type: "closed", name: "Good Friday", source: "inferred" },
+    "2027-05-31": {
+      type: "special",
+      name: "Memorial Day",
+      sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }],
+      source: "inferred"
+    },
+    "2027-06-18": {
+      type: "special",
+      name: "Juneteenth",
+      sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }],
+      source: "inferred"
+    },
+    "2027-07-05": {
+      type: "special",
+      name: "Independence Day",
+      sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }],
+      source: "inferred"
+    },
+    "2027-09-06": {
+      type: "special",
+      name: "Labor Day",
+      sessions: [{ open: "17:00", close: "16:00", closeDayOffset: 1 }],
+      source: "inferred"
+    },
+    "2027-11-25": { type: "closed", name: "Thanksgiving", source: "inferred" },
+    "2027-11-26": {
+      type: "special",
+      name: "Day After Thanksgiving",
+      sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }],
+      source: "inferred"
+    },
+    "2027-12-24": {
+      type: "special",
+      name: "Christmas Day (Observed)",
+      sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }],
+      source: "inferred"
+    },
+    "2027-12-31": {
+      type: "special",
+      name: "New Year's Day (Observed)",
+      sessions: [{ open: "17:00", openDayOffset: -1, close: "12:00", closeDayOffset: 0 }],
+      source: "inferred"
+    }
   }
 };
 
 export const holidayDataDisclosure = {
   title: "Holiday Data Disclosure",
-  body: "Built-in holiday data now includes full 2026 reference coverage for all tracked markets, plus official 2027 dates currently published for NYSE, LSE, and JPX / TSE. TSX 2027 is included as a preliminary inferred schedule derived from the exchange's named holiday pattern and observed-date conventions, not from an official 2027 TSX publication. Other markets remain on 2026 built-in data until their official 2027 calendars are published or verified. CME follows the published 2026 Globex holiday date windows in a simplified product-agnostic model, so it may still differ from product-specific hours, ad hoc changes, and final holiday-hour updates.",
+  body: "Built-in holiday data now includes full 2026 reference coverage for all tracked markets, plus official 2027 dates currently published for NYSE, LSE, and JPX / TSE. For TSX, ASX, SGX, HKEX, SSE, and CME, 2027 is included as a preliminary inferred schedule derived from named holiday patterns, observed-date conventions, and simplified exchange behavior where official exchange calendars are not yet published or verified. Inferred entries are intended as best-effort planning references and may differ from final official exchange announcements. CME remains a simplified product-agnostic Globex-style model and may still differ from product-specific hours, ad hoc changes, and final holiday-hour updates.",
   lastUpdated: "2026-06-15",
   sourceLinks: [
     { marketId: "cme", label: "CME Group Globex", url: "https://www.cmegroup.com/trading-hours.html#globex" },
