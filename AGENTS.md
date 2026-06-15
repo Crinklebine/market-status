@@ -51,6 +51,15 @@ Suggested ownership:
 - Use progressive enhancement with vanilla HTML, CSS, and JavaScript.
 - Keep the site easy to host on GitHub Pages.
 
+## Release And Cache-Busting Rules
+
+- For user-visible web app changes, bump the displayed app version in `app.js`.
+- Keep `index.html` asset query-string cache busting aligned with the current app version.
+- When browser JavaScript modules change, ensure cache busting covers the full module graph, not only top-level `index.html` links.
+- If `app.js` imports browser modules directly, update those import URLs consistently when using manual query-string cache busting.
+- Before pushing frontend changes, verify that the app version, `index.html` asset versions, and any versioned module import URLs all match.
+- Treat GitHub Pages and browser caching as part of release quality, not as a separate afterthought.
+
 ## Safe Change Guidance
 
 - Keep the app fully static.
