@@ -19,7 +19,22 @@ export const holidayCalendars = {
       name: "Christmas Eve",
       sessions: [{ open: "09:30", close: "13:00" }]
     },
-    "2026-12-25": { type: "closed", name: "Christmas Day" }
+    "2026-12-25": { type: "closed", name: "Christmas Day" },
+    "2027-01-01": { type: "closed", name: "New Year's Day" },
+    "2027-01-18": { type: "closed", name: "Martin Luther King Jr. Day" },
+    "2027-02-15": { type: "closed", name: "Presidents' Day" },
+    "2027-03-26": { type: "closed", name: "Good Friday" },
+    "2027-05-31": { type: "closed", name: "Memorial Day" },
+    "2027-06-18": { type: "closed", name: "Juneteenth (Observed)" },
+    "2027-07-05": { type: "closed", name: "Independence Day (Observed)" },
+    "2027-09-06": { type: "closed", name: "Labor Day" },
+    "2027-11-25": { type: "closed", name: "Thanksgiving" },
+    "2027-11-26": {
+      type: "special",
+      name: "Day After Thanksgiving",
+      sessions: [{ open: "09:30", close: "13:00" }]
+    },
+    "2027-12-24": { type: "closed", name: "Christmas Day (Observed)" }
   },
   tsx: {
     "2026-01-01": { type: "closed", name: "New Year's Day" },
@@ -46,7 +61,15 @@ export const holidayCalendars = {
     "2026-05-25": { type: "closed", name: "Spring Bank Holiday" },
     "2026-08-31": { type: "closed", name: "Summer Bank Holiday" },
     "2026-12-25": { type: "closed", name: "Christmas Day" },
-    "2026-12-28": { type: "closed", name: "Boxing Day (Observed)" }
+    "2026-12-28": { type: "closed", name: "Boxing Day (Observed)" },
+    "2027-01-01": { type: "closed", name: "New Year's Day" },
+    "2027-03-26": { type: "closed", name: "Good Friday" },
+    "2027-03-29": { type: "closed", name: "Easter Monday" },
+    "2027-05-03": { type: "closed", name: "Early May Bank Holiday" },
+    "2027-05-31": { type: "closed", name: "Spring Bank Holiday" },
+    "2027-08-30": { type: "closed", name: "Summer Bank Holiday" },
+    "2027-12-27": { type: "closed", name: "Christmas Day (Observed)" },
+    "2027-12-28": { type: "closed", name: "Boxing Day (Observed)" }
   },
   tse: {
     "2026-01-01": { type: "closed", name: "New Year's Day" },
@@ -67,7 +90,24 @@ export const holidayCalendars = {
     "2026-10-12": { type: "closed", name: "Sports Day" },
     "2026-11-03": { type: "closed", name: "Culture Day" },
     "2026-11-23": { type: "closed", name: "Labor Thanksgiving Day" },
-    "2026-12-31": { type: "closed", name: "Year-End Holiday" }
+    "2026-12-31": { type: "closed", name: "Year-End Holiday" },
+    "2027-01-01": { type: "closed", name: "New Year's Day" },
+    "2027-01-11": { type: "closed", name: "Coming of Age Day" },
+    "2027-02-11": { type: "closed", name: "National Foundation Day" },
+    "2027-02-23": { type: "closed", name: "Emperor's Birthday" },
+    "2027-03-22": { type: "closed", name: "Vernal Equinox Day (Observed)" },
+    "2027-04-29": { type: "closed", name: "Showa Day" },
+    "2027-05-03": { type: "closed", name: "Constitution Memorial Day" },
+    "2027-05-04": { type: "closed", name: "Greenery Day" },
+    "2027-05-05": { type: "closed", name: "Children's Day" },
+    "2027-07-19": { type: "closed", name: "Marine Day" },
+    "2027-08-11": { type: "closed", name: "Mountain Day" },
+    "2027-09-20": { type: "closed", name: "Respect for the Aged Day" },
+    "2027-09-23": { type: "closed", name: "Autumnal Equinox Day" },
+    "2027-10-11": { type: "closed", name: "Sports Day" },
+    "2027-11-03": { type: "closed", name: "Culture Day" },
+    "2027-11-23": { type: "closed", name: "Labor Thanksgiving Day" },
+    "2027-12-31": { type: "closed", name: "Year-End Holiday" }
   },
   sse: {
     "2026-01-01": { type: "closed", name: "New Year's Day" },
@@ -206,8 +246,8 @@ export const holidayCalendars = {
 
 export const holidayDataDisclosure = {
   title: "Holiday Data Disclosure",
-  body: "Built-in holiday data is static 2026 reference data. We sourced exchange calendars from official exchange or government pages where available. CME now follows the published 2026 Globex holiday date windows in a simplified product-agnostic model, but it may still differ from product-specific hours, ad hoc changes, and final holiday-hour updates.",
-  lastUpdated: "2026-04-06",
+  body: "Built-in holiday data now includes full 2026 reference coverage for all tracked markets, plus official 2027 dates currently published for NYSE, LSE, and JPX / TSE. Other markets remain on 2026 built-in data until their official 2027 calendars are published or verified. CME follows the published 2026 Globex holiday date windows in a simplified product-agnostic model, so it may still differ from product-specific hours, ad hoc changes, and final holiday-hour updates.",
+  lastUpdated: "2026-06-15",
   sourceLinks: [
     { marketId: "cme", label: "CME Group Globex", url: "https://www.cmegroup.com/trading-hours.html#globex" },
     { marketId: "nyse", label: "NYSE", url: "https://www.nyse.com/trade/hours-calendars" },

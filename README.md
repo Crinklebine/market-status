@@ -14,7 +14,7 @@ MarketStatus is a static web app for tracking whether major global stock markets
 - `base.css`: app styling
 - `app.js`: browser app controller
 - `static/modules/marketDefinitions.js`: market metadata and sessions
-- `static/modules/marketHolidays.js`: built-in 2026 holiday data and disclosure
+- `static/modules/marketHolidays.js`: built-in holiday data and disclosure
 - `static/modules/marketSchedule.js`: timezone-aware schedule engine
 - `static/modules/formatters.js`: display helpers
 
@@ -54,7 +54,7 @@ After that, GitHub will publish the site automatically on each push to `main`.
 
 ## Notes
 
-- Market schedules and holiday data are static built-in 2026 reference data.
+- Market schedules use built-in reference data, with full 2026 holiday coverage and partial official 2027 coverage where published.
 - CME remains a simplified generic Globex-style schedule rather than a product-specific session engine.
 - External source links open directly from the page.
 
