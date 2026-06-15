@@ -266,3 +266,7 @@ export function getHolidayEntries(marketId) {
     ...calendar[dateKey]
   }));
 }
+
+export function getUpcomingHolidayEntries(marketId, fromDateKey) {
+  return getHolidayEntries(marketId).filter((holiday) => holiday.dateKey >= fromDateKey);
+}

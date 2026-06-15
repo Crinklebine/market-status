@@ -1,5 +1,5 @@
 import { markets } from "./static/modules/marketDefinitions.js";
-import { getHolidayEntries, holidayDataDisclosure } from "./static/modules/marketHolidays.js";
+import { getUpcomingHolidayEntries, holidayDataDisclosure } from "./static/modules/marketHolidays.js";
 import { getAllMarketStatuses } from "./static/modules/marketSchedule.js";
 import {
   formatDisclosureDate,
@@ -23,7 +23,7 @@ const els = {
   footerVersion: document.querySelector("[data-footer-version]"),
 };
 
-const APP_VERSION = "1.0.4";
+const APP_VERSION = "1.0.5";
 const localTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time";
 const marketCardsById = new Map();
 
@@ -44,21 +44,46 @@ function closeHolidayModal() {
   els.holidayModal.hidden = true;
 }
 
+function groupHolidaysByYear(holidays) {
+  const groups = new Map();
+
+  for (const holiday of holidays) {
+    const year = holiday.dateKey.slice(0, 4);
+    if (!groups.has(year)) {
+      groups.set(year, []);
+    }
+    groups.get(year).push(holiday);
+  }
+
+  return [...groups.entries()].map(([year, entries]) => ({ year, entries }));
+}
+
 function renderHolidayModal(marketId, marketLabel) {
-  const holidays = getHolidayEntries(marketId);
+  const market = markets.find((entry) => entry.id === marketId);
+  const fromDateKey = market ? getLocalDateKey(new Date(), market.timeZone) : "";
+  const holidays = getUpcomingHolidayEntries(marketId, fromDateKey);
+  const holidayYears = groupHolidaysByYear(holidays);
+
   els.holidayModalTitle.textContent = `${marketLabel} Holidays`;
-  els.holidayModalBody.innerHTML = holidays.length > 0
+  els.holidayModalBody.innerHTML = holidayYears.length > 0
     ? `
-      <ul class="modal__holiday-list">
-        ${holidays.map((holiday) => `
-          <li class="modal__holiday-item">
-            <span class="modal__holiday-date">${formatHolidayDate(holiday.dateKey)}</span>
-            <span class="modal__holiday-name">${holiday.name}</span>
-          </li>
+      <div class="modal__holiday-groups">
+        ${holidayYears.map((group) => `
+          <section class="modal__holiday-group" aria-label="Holidays for ${group.year}">
+            <h3 class="modal__holiday-year">${group.year}</h3>
+            <ul class="modal__holiday-list">
+              ${group.entries.map((holiday) => `
+                <li class="modal__holiday-item">
+                  <span class="modal__holiday-date">${formatHolidayDate(holiday.dateKey)}</span>
+                  <span class="modal__holiday-name">${holiday.name}</span>
+                </li>
+              `).join("")}
+            </ul>
+          </section>
         `).join("")}
-      </ul>
+      </div>
     `
-    : `<p class="modal__empty">No holiday data available.</p>`;
+    : `<p class="modal__empty">No upcoming holiday data available.</p>`;
 }
 
 function renderHolidayDisclosure() {
