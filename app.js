@@ -25,7 +25,7 @@ const els = {
   footerVersion: document.querySelector("[data-footer-version]"),
 };
 
-const APP_VERSION = "1.0.10";
+const APP_VERSION = "1.0.11";
 const localTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time";
 const marketCardsById = new Map();
 let activeModalAnimation = null;
