@@ -17,6 +17,8 @@ const els = {
   errorPanel: document.querySelector("[data-app-error]"),
   disclosurePanel: document.querySelector("[data-holiday-disclosure]"),
   holidayModal: document.querySelector("[data-holiday-modal]"),
+  holidayModalBackdrop: document.querySelector(".modal__backdrop"),
+  holidayModalPanel: document.querySelector(".modal__panel"),
   holidayModalTitle: document.querySelector("[data-holiday-modal-title]"),
   holidayModalBody: document.querySelector("[data-holiday-modal-body]"),
   footerCopyright: document.querySelector("[data-footer-copyright]"),
@@ -26,6 +28,7 @@ const els = {
 const APP_VERSION = "1.0.10";
 const localTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone || "Local time";
 const marketCardsById = new Map();
+let activeModalAnimation = null;
 
 function formatTransitionLabel(status) {
   return {
@@ -37,11 +40,89 @@ function formatTransitionLabel(status) {
 function showHolidayModalLoading(marketLabel) {
   els.holidayModalTitle.textContent = `${marketLabel} Holidays`;
   els.holidayModalBody.innerHTML = `<p class="modal__empty">Loading holiday list...</p>`;
+  openHolidayModal();
+}
+
+function shouldReduceMotion() {
+  return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+function stopActiveModalAnimation() {
+  if (activeModalAnimation) {
+    activeModalAnimation.cancel();
+    activeModalAnimation = null;
+  }
+}
+
+function openHolidayModal() {
+  stopActiveModalAnimation();
   els.holidayModal.hidden = false;
+
+  if (shouldReduceMotion()) {
+    return;
+  }
+
+  const backdropAnimation = els.holidayModalBackdrop.animate(
+    [
+      { opacity: 0 },
+      { opacity: 1 },
+    ],
+    { duration: 190, easing: "ease-out", fill: "both" }
+  );
+
+  const panelAnimation = els.holidayModalPanel.animate(
+    [
+      { opacity: 0, transform: "translateY(10px) scale(0.965)" },
+      { opacity: 1, transform: "translateY(0) scale(1)" },
+    ],
+    { duration: 240, easing: "cubic-bezier(0.22, 1, 0.36, 1)", fill: "both" }
+  );
+
+  activeModalAnimation = panelAnimation;
+  panelAnimation.finished.finally(() => {
+    if (activeModalAnimation === panelAnimation) {
+      activeModalAnimation = null;
+    }
+  });
+  backdropAnimation.finished.catch(() => {});
 }
 
 function closeHolidayModal() {
-  els.holidayModal.hidden = true;
+  stopActiveModalAnimation();
+
+  if (els.holidayModal.hidden || shouldReduceMotion()) {
+    els.holidayModal.hidden = true;
+    return;
+  }
+
+  const backdropAnimation = els.holidayModalBackdrop.animate(
+    [
+      { opacity: 1 },
+      { opacity: 0 },
+    ],
+    { duration: 150, easing: "ease-in", fill: "both" }
+  );
+
+  const panelAnimation = els.holidayModalPanel.animate(
+    [
+      { opacity: 1, transform: "translateY(0) scale(1)" },
+      { opacity: 0, transform: "translateY(8px) scale(0.975)" },
+    ],
+    { duration: 180, easing: "ease-in", fill: "both" }
+  );
+
+  activeModalAnimation = panelAnimation;
+  panelAnimation.finished
+    .then(() => {
+      els.holidayModal.hidden = true;
+    })
+    .catch(() => {})
+    .finally(() => {
+      if (activeModalAnimation === panelAnimation) {
+        activeModalAnimation = null;
+      }
+    });
+  backdropAnimation.finished.catch(() => {});
 }
 
 function groupHolidaysByYear(holidays) {
